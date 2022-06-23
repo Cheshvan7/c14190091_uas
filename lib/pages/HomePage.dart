@@ -31,8 +31,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home"),
-        centerTitle: true,
+        title: Text("Home")
       ),
       body: Column(
         children: [
@@ -54,10 +53,24 @@ class _HomePageState extends State<HomePage> {
                             leading: CircleAvatar(backgroundImage: NetworkImage(isiData[index].thumbnail),),
                             subtitle: Container(
                               padding: EdgeInsets.all(8),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
                                 children: [
-                                  Text(isiData[index].pubDate)
+                                  Text(isiData[index].pubDate),
+                                  IconButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        checkLike[index] = !checkLike[index];
+                                        like(isiData[index], index);
+                                      });
+                                    },
+                                    icon: Icon(
+                                      Icons.thumb_up_sharp,
+                                      color: checkLike[index]
+                                      ? Colors.lightBlue
+                                      : Colors.blueGrey
+                                    )
+                                  )
                                 ],
                               ),
                             ),
@@ -65,12 +78,12 @@ class _HomePageState extends State<HomePage> {
                               Navigator.push(context, MaterialPageRoute(builder: (context) => DetailPage(detailData: isiData[index])));
                             },
                             onLongPress: () {
-                              if (checkLike[index] == false) {
-                                checkLike[index] = true;
-                              } else if (checkLike[index] == true) {
-                                checkLike[index] = false;
-                              }
-                              like(isiData[index], index);
+                              // if (checkLike[index] == false) {
+                              //   checkLike[index] = true;
+                              // } else if (checkLike[index] == true) {
+                              //   checkLike[index] = false;
+                              // }
+                              // like(isiData[index], index);
                             },
                           ),
                         );

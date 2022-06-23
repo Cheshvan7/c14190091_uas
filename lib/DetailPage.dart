@@ -31,16 +31,27 @@ class _DetailPageState extends State<DetailPage> {
       body: Column(
         children: [
           Container(
+            padding: EdgeInsets.all(16),
+            child: Text(widget.detailData.title, style: TextStyle(fontSize: 22), textAlign: TextAlign.center,),
+          ),
+
+          Container(
+            padding: EdgeInsets.fromLTRB(16, 0, 16, 16),
+            child: Text(widget.detailData.pubDate),
+          ), 
+          Container(
+            padding: EdgeInsets.fromLTRB(16, 0, 16, 16),
             child: Image(image: NetworkImage(widget.detailData.thumbnail)),
           ),
+          
           Container(
-            child: Text(widget.detailData.title),
+            padding: EdgeInsets.fromLTRB(16, 0, 16, 16),
+            child: Text(widget.detailData.description, style: TextStyle(fontSize: 16), textAlign: TextAlign.justify,),
           ),
+          
           Container(
-            child: Text(widget.detailData.description),
-          ),
-          Container(
-            child: Text(widget.detailData.pubDate),
+            padding: EdgeInsets.fromLTRB(16, 0, 16, 16),
+            child: Text("Link Ref = ${widget.detailData.link}"),
           )
         ],
       ),
