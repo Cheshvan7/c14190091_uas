@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "885622060165",
+    "project_id": "ambw-uas",
+    "storage_bucket": "ambw-uas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885622060165:android:5687c9b892fe25a1c7a5ec",
+        "android_client_info": {
+          "package_name": "com.example.c14190091_uas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885622060165-nvh307kjlrn199chnhm57p7ljuen1b7v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQCN6MEXRzfnURYN5PPAskTZK8xIHy86M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885622060165-nvh307kjlrn199chnhm57p7ljuen1b7v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
